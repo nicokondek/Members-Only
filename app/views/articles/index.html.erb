@@ -1,0 +1,18 @@
+
+<p style="color: green"><%= notice %></p>
+
+
+<div class="container">
+
+  <div class="d-flex justify-content-center">
+
+
+    <div id="articles">
+       <% @articles.each do |article| %>
+       <%= render article %>
+       <br />
+       <% end %>
+    </div>
+  </div>
+
+</div>

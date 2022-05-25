@@ -1,0 +1,17 @@
+<div id="<%= dom_id article %>">
+</div>
+
+<div class="card text-center" style="max-width: 50rem;">
+  <div class="card-body">
+    <% if user_signed_in? %>
+        <h5 class="card-title"><%= article.title %></h5>
+        <p class="card-text"><%= article.content %></p>
+        <%= link_to "Full post", article, class:"btn btn-dark" %>
+    
+    <% else %>
+    <p>Log in to see full post</p>
+    <h5 class="card-title"><%= article.title %></h5>
+
+     <% end %>
+  </div>
+</div>
