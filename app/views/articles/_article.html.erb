@@ -3,15 +3,14 @@
 
 <div class="card text-center" style="max-width: 50rem;">
   <div class="card-body">
-    <% if user_signed_in? %>
+    
         <h5 class="card-title"><%= article.title %></h5>
         <p class="card-text"><%= article.content %></p>
-        <%= link_to "Full post", article, class:"btn btn-dark" %>
-    
-    <% else %>
-    <p>Log in to see full post</p>
-    <h5 class="card-title"><%= article.title %></h5>
-
-     <% end %>
+        <% if user_signed_in? %>
+        <p class="card-text"><p>Written by <%= article.email %></p>
+        <% end %>
+   
+        <%= link_to "See Post", article, class:"btn btn-dark" %>
+  
   </div>
 </div>
